@@ -30,10 +30,11 @@ jobs:
           - v1-dependencies-{{ checksum "build.gradle" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-          override:
-               - chmod +x gradlew
 
-      - run: gradle dependencies
+      - run:
+        name: chmod permissions
+        command: chmod +x ./gradlew
+        gradle dependencies
 
       - save_cache:
           paths:
