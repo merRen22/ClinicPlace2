@@ -15,7 +15,7 @@ jobs:
       # - image: circleci/postgres:9.4
     working_directory: ~/repo
 
-    dependencies: -chmod +x gradlew
+    dependencies: - chmod +x gradlew
 
     environment:
       # Customize the JVM maximum heap limit
