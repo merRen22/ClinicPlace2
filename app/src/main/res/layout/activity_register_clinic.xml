@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    tools:context="com.example.anthony.clinicplace.RegisterClinicActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        />
+    <TextView
+        android:id="@+id/elegirFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/profile_picture"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:text="Elegir Foto"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombres"
+        android:layout_marginTop="20dp"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        app:layout_constraintTop_toBottomOf="@+id/elegirFoto"
+        app:layout_constraintLeft_toRightOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/nombreClinica"
+        style="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="Ingrese nombre de clinica"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+
+    <TextView
+        android:id="@+id/txtApellidos"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripcion"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreClinica" />
+
+    <EditText
+        android:id="@+id/descripcionClinica"
+        style="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripcion de clinica"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidos" />
+
+    <TextView
+        android:id="@+id/txtDNI"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="direccion principal"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionClinica" />
+
+    <EditText
+        android:id="@+id/direccionPrincipalClinica"
+        style="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="direccion principal de la clinica"
+        app:layout_constraintTop_toBottomOf="@+id/txtDNI" />
+
+    <TextView
+        android:id="@+id/txtUbicacion"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Numero telefonico"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/direccionPrincipalClinica" />
+
+    <AutoCompleteTextView
+        android:id="@+id/numeroTelefonicoClinica"
+        style="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese numero telefonico"
+        app:layout_constraintTop_toBottomOf="@+id/txtUbicacion" />
+
+    <Button
+        android:id="@+id/crearClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numeroTelefonicoClinica" />
+
+</android.support.constraint.ConstraintLayout>
