@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:text="ADMINISTRADOR"
         style="@style/Base.TextAppearance.AppCompat.Headline"
-        android:gravity="center"
 
     />
     <Button
