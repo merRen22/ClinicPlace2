@@ -8,20 +8,24 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/android:api-25-alpha
-      - supo chmod +x gradlew
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
     working_directory: ~/repo
 
-    #dependencies:
+
 
 
     environment:
       # Customize the JVM maximum heap limit
       JVM_OPTS: -Xmx3200m
       TERM: dumb
+
+    dependencies:
+      override:
+        - chmod +x gradlew
+        - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
 
     steps:
       - checkout
